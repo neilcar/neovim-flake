@@ -29,7 +29,9 @@ return function()
     vim.g.loaded_python_provider = 0
     vim.g.loaded_python3_provider = 0
     vim.g.loaded_ruby_provider = 0
-
+    vim.api.nvim_create_autocmd("VimEnter", {
+      command = "set nornu nonu | Neotree toggle",
+    })
     require("aorith.mini_deps")()
   end
 end
